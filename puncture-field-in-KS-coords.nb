@@ -1,0 +1,2808 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    113569,       2800]
+NotebookOptionsPosition[    111896,       2761]
+NotebookOutlinePosition[    112342,       2779]
+CellTagsIndexPosition[    112299,       2776]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Puncture Field in Kerr - Schild Coordinates", "Subtitle",
+ CellChangeTimes->{{3.889501315424789*^9, 
+  3.8895013261007023`*^9}},ExpressionUUID->"13aef0fd-49fb-4806-bd21-\
+fb0f703c80a9"],
+
+Cell[BoxData[{
+ RowBox[{
+  SuperscriptBox["x", "\[Alpha]"], "=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"t", ",", "x", ",", "y", ",", "z"}], "}"}], " ", ":", " ", 
+   RowBox[{
+   "Position", " ", "of", " ", "field", " ", 
+    "evaluation"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox[
+   OverscriptBox["x", "_"], "\[Alpha]"], "=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     OverscriptBox["t", "_"], ",", 
+     OverscriptBox["x", "_"], ",", " ", 
+     OverscriptBox["y", "_"], ",", 
+     OverscriptBox["z", "_"]}], "}"}], ":", " ", 
+   RowBox[{
+   "Position", " ", "of", " ", "scalar", " ", 
+    "charge"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox["\[CapitalDelta]x", 
+   RowBox[{"\[Alpha]", " "}]], "=", 
+  RowBox[{
+   SuperscriptBox["x", "\[Alpha]"], "-", 
+   SuperscriptBox[
+    OverscriptBox["x", "_"], "\[Alpha]"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["r", 
+    RowBox[{"p", " "}]], "=", 
+   RowBox[{
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       OverscriptBox["x", "_"], "2"], "+", 
+      SuperscriptBox[
+       OverscriptBox["y", "_"], "2"], "+", 
+      SuperscriptBox[
+       OverscriptBox["z", "_"], "2"]}]], ":", " ", 
+    RowBox[{"Radius", " ", "of", " ", "scalar", " ", "charge"}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{"M", ":", " ", 
+  RowBox[{
+  "Mass", " ", "of", " ", "Schwarzschild", " ", "Black", " ", 
+   "Hole"}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[Xi]", " ", "=", 
+  RowBox[{
+   SubscriptBox["r", 
+    RowBox[{"p", " "}]], "-", 
+   RowBox[{"3", "M"}]}]}]}], "Text",
+ CellChangeTimes->{{3.889500867750334*^9, 3.8895009527079363`*^9}, {
+  3.889500986963077*^9, 3.889501021147881*^9}, {3.889501053700799*^9, 
+  3.88950113404841*^9}, {3.889501176263785*^9, 3.8895012698850393`*^9}, {
+  3.88950130765635*^9, 3.889501308177876*^9}, {3.8895013394266777`*^9, 
+  3.889501371527749*^9}, {3.8895014728976192`*^9, 3.889501493101067*^9}, {
+  3.8895015396899242`*^9, 
+  3.8895015653073053`*^9}},ExpressionUUID->"900380ca-8620-4027-9758-\
+952e5ad51955"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  SubscriptBox["s", "1"], 
+  TraditionalForm]],ExpressionUUID->"1f221183-ab7f-4534-a54b-58b0d3838ba3"]], \
+"Subsection",
+ CellChangeTimes->{{3.869308626488617*^9, 3.869308635319736*^9}, {
+  3.869467625104576*^9, 3.8694676263858232`*^9}, {3.869467729733498*^9, 
+  3.869467736708846*^9}},ExpressionUUID->"6b4cfc8d-f6f2-4e53-b804-\
+f16558fe297b"],
+
+Cell[BoxData[
+ RowBox[{"\[Sqrt]", 
+  RowBox[{"(", 
+   RowBox[{
+    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+    SuperscriptBox["\[CapitalDelta]z", "2"], "+", 
+    RowBox[{
+     SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       FractionBox[
+        RowBox[{"2", " ", "M", " ", 
+         SuperscriptBox[
+          OverscriptBox["x", "_"], "2"]}], 
+        SubsuperscriptBox["r", "p", "3"]]}], ")"}]}], "+", 
+    FractionBox[
+     RowBox[{
+     "4", " ", "M", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+      OverscriptBox["x", "_"], " ", 
+      OverscriptBox["y", "_"]}], 
+     SubsuperscriptBox["r", "p", "3"]], "+", 
+    FractionBox[
+     RowBox[{"2", " ", "M", " ", 
+      SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+      SuperscriptBox[
+       OverscriptBox["y", "_"], "2"]}], 
+     SubsuperscriptBox["r", "p", "3"]], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "\[CapitalDelta]y"}], " ", 
+           OverscriptBox["x", "_"]}], "+", 
+          RowBox[{"\[CapitalDelta]x", " ", 
+           OverscriptBox["y", "_"]}]}], ")"}], " ", 
+        SqrtBox[
+         FractionBox["M", 
+          RowBox[{"\[Xi]", " ", 
+           SubsuperscriptBox["r", "p", "2"]}]]]}], "-", 
+       FractionBox[
+        RowBox[{"2", " ", "M", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[CapitalDelta]x", " ", 
+            OverscriptBox["x", "_"]}], "+", 
+           RowBox[{"\[CapitalDelta]y", " ", 
+            OverscriptBox["y", "_"]}]}], ")"}]}], 
+        SqrtBox[
+         RowBox[{"\[Xi]", " ", 
+          SubsuperscriptBox["r", "p", "3"]}]]]}], ")"}], "2"]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.872231003747707*^9, 3.8722310399110527`*^9, 
+  3.872231709351859*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"4e8c5f58-02ff-43a4-8432-ab7b1008e1bb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "0"], TraditionalForm]],ExpressionUUID->
+  "1f3b3201-c5d4-448e-af3b-bbdd02ff0b72"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["\[CapitalDelta]x", "\[Alpha]"]}], TraditionalForm]],
+  ExpressionUUID->"4940c69e-d65c-4755-aed3-7ea99dbb14ed"],
+ ")"
+}], "Subsection",
+ CellChangeTimes->{{3.869308626488617*^9, 3.869308635319736*^9}, {
+  3.8694676959698277`*^9, 3.869467707450921*^9}, {3.869467749279241*^9, 
+  3.8694677513867617`*^9}},ExpressionUUID->"a69ba442-8ec1-43a5-903b-\
+1ef1dde078b9"],
+
+Cell[BoxData["1"], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.869128900220085*^9, 3.869128908945966*^9}, {
+  3.869313688670433*^9, 3.86931369130189*^9}},
+ CellLabel->"Out[17]=",ExpressionUUID->"adffc9ed-87c2-41e4-b0c8-44e4dffe5e85"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "3"], TraditionalForm]],ExpressionUUID->
+  "ea691381-8d8e-43d4-a1cd-99395fb4f03c"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["\[CapitalDelta]x", "\[Alpha]"]}], TraditionalForm]],
+  ExpressionUUID->"9cc89d18-aed4-4691-a25d-81ff98915141"],
+ ")"
+}], "Subsection",
+ CellChangeTimes->{{3.869308626488617*^9, 3.869308644985416*^9}, 
+   3.869467712685219*^9, {3.8694677544846487`*^9, 
+   3.8694677558940773`*^9}},ExpressionUUID->"547b9295-4958-4aa5-9436-\
+c45b572c30c5"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"2", " ", 
+    SubsuperscriptBox["r", "p", "6"]}]], 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"M", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[CapitalDelta]x", " ", 
+        OverscriptBox["x", "_"]}], "+", 
+       RowBox[{"\[CapitalDelta]y", " ", 
+        OverscriptBox["y", "_"]}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+             SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], ")"}], " ", 
+        SuperscriptBox[
+         OverscriptBox["x", "_"], "2"]}], "+", 
+       RowBox[{"6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+        OverscriptBox["x", "_"], " ", 
+        OverscriptBox["y", "_"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "2"}], " ", 
+           SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+          SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+        SuperscriptBox[
+         OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+     SubscriptBox["r", "p"]}], "+", 
+    RowBox[{"2", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["M", "\[Xi]"], ")"}], 
+      RowBox[{"3", "/", "2"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+          SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+          SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+        SuperscriptBox[
+         OverscriptBox["x", "_"], "2"]}], "+", 
+       RowBox[{"4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+        OverscriptBox["x", "_"], " ", 
+        OverscriptBox["y", "_"]}], "-", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+          SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+          SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+        SuperscriptBox[
+         OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SqrtBox[
+         RowBox[{"M", " ", "\[Xi]"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[CapitalDelta]x", " ", 
+           OverscriptBox["x", "_"]}], "+", 
+          RowBox[{"\[CapitalDelta]y", " ", 
+           OverscriptBox["y", "_"]}]}], ")"}], " ", 
+        SubscriptBox["r", "p"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[CapitalDelta]y", " ", 
+           OverscriptBox["x", "_"]}], "-", 
+          RowBox[{"\[CapitalDelta]x", " ", 
+           OverscriptBox["y", "_"]}]}], ")"}], " ", 
+        SqrtBox[
+         RowBox[{"\[Xi]", " ", 
+          SubsuperscriptBox["r", "p", "3"]}]]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.8722317645317593`*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"ec480890-505e-4d5c-a5ce-2dd3577c1a0a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "6"], TraditionalForm]],ExpressionUUID->
+  "77f38152-dcdf-4050-9b04-05e6a843f1a1"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["\[CapitalDelta]x", "\[Alpha]"]}], TraditionalForm]],
+  ExpressionUUID->"5534d8aa-8aba-4715-ae91-a94fbf6cc7bb"],
+ ")"
+}], "Subsection",
+ CellChangeTimes->{{3.869308626488617*^9, 3.8693086714894657`*^9}, 
+   3.8694677143472767`*^9, {3.869467757439897*^9, 
+   3.869467760109796*^9}},ExpressionUUID->"44d88252-6a7f-4c68-9c49-\
+cca8a9413d5d"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"24", " ", 
+    SubsuperscriptBox["r", "p", "12"]}]], 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "M"}], " ", 
+     SubsuperscriptBox["r", "p", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+       SuperscriptBox["\[CapitalDelta]z", "2"], "+", 
+       RowBox[{
+        SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          FractionBox[
+           RowBox[{"2", " ", "M", " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], 
+           SubsuperscriptBox["r", "p", "3"]]}], ")"}]}], "+", 
+       FractionBox[
+        RowBox[{
+        "4", " ", "M", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+         
+         OverscriptBox["x", "_"], " ", 
+         OverscriptBox["y", "_"]}], 
+        SubsuperscriptBox["r", "p", "3"]], "+", 
+       FractionBox[
+        RowBox[{"2", " ", "M", " ", 
+         SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+         SuperscriptBox[
+          OverscriptBox["y", "_"], "2"]}], 
+        SubsuperscriptBox["r", "p", "3"]], "+", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", 
+              SubsuperscriptBox["r", "p", "3"]}]]}]}], ")"}], "2"], 
+        RowBox[{"\[Xi]", " ", 
+         SubsuperscriptBox["r", "p", "5"]}]]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"12", " ", "M", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+             SuperscriptBox[
+              OverscriptBox["x", "_"], "2"]}], "+", 
+            RowBox[{
+            "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+             OverscriptBox["x", "_"], " ", 
+             OverscriptBox["y", "_"]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+             SuperscriptBox[
+              OverscriptBox["y", "_"], "2"]}]}], ")"}], "2"], " ", 
+         SubsuperscriptBox["r", "p", "3"]}], "\[Xi]"], "+", 
+       RowBox[{
+        SubscriptBox["r", "p"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           SuperscriptBox["M", "2"], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], "4"]}], "+", 
+          RowBox[{"M", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"3", " ", 
+                 SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                RowBox[{"4", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                   SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+               ")"}], " ", 
+              SuperscriptBox[
+               OverscriptBox["x", "_"], "2"]}], "+", 
+             RowBox[{
+             "14", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+              OverscriptBox["x", "_"], " ", 
+              OverscriptBox["y", "_"]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "4"}], " ", 
+                 SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                RowBox[{"3", " ", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"]}], "-", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+              SuperscriptBox[
+               OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+           SubscriptBox["r", "p"]}], "+", 
+          RowBox[{"4", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 SuperscriptBox["\[CapitalDelta]x", "4"]}], "-", 
+                RowBox[{"11", " ", 
+                 SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                   SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], 
+                  "2"]}]}], ")"}], " ", 
+              SuperscriptBox[
+               OverscriptBox["x", "_"], "4"]}], "+", 
+             RowBox[{
+             "30", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+              SuperscriptBox[
+               OverscriptBox["x", "_"], "3"], " ", 
+              OverscriptBox["y", "_"]}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"11", " ", 
+                 SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                RowBox[{"11", " ", 
+                 SuperscriptBox["\[CapitalDelta]y", "4"]}], "+", 
+                RowBox[{"7", " ", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], "-", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "68"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                   RowBox[{"7", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+               ")"}], " ", 
+              SuperscriptBox[
+               OverscriptBox["x", "_"], "2"], " ", 
+              SuperscriptBox[
+               OverscriptBox["y", "_"], "2"]}], "-", 
+             RowBox[{
+             "30", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+              OverscriptBox["x", "_"], " ", 
+              SuperscriptBox[
+               OverscriptBox["y", "_"], "3"]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                RowBox[{"2", " ", 
+                 SuperscriptBox["\[CapitalDelta]y", "4"]}], "-", 
+                RowBox[{"11", " ", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], "+", 
+                RowBox[{"2", " ", 
+                 SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "11"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+               ")"}], " ", 
+              SuperscriptBox[
+               OverscriptBox["y", "_"], "4"]}]}], ")"}], " ", 
+           SubsuperscriptBox["r", "p", "2"]}]}], ")"}]}], "+", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox["\[Xi]", 
+          RowBox[{"3", "/", "2"}]]], 
+        RowBox[{"4", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            SuperscriptBox["M", "2"], " ", 
+            SqrtBox["\[Xi]"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "3"]}], "-", 
+           RowBox[{"2", " ", "M", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{
+            SqrtBox[
+             RowBox[{"M", " ", "\[Xi]"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "2"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubsuperscriptBox["r", "p", 
+             RowBox[{"3", "/", "2"}]]}], "-", 
+           RowBox[{"4", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"3", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "8", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "3"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubsuperscriptBox["r", "p", "2"]}], "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["M", 
+             RowBox[{"3", "/", "2"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+            SqrtBox[
+             RowBox[{"\[Xi]", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "\[CapitalDelta]y"}], " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", 
+              SubsuperscriptBox["r", "p", "3"]}]]}]}], ")"}]}]}]}], ")"}]}], 
+    "+", 
+    RowBox[{"9", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"M", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[CapitalDelta]x", " ", 
+            OverscriptBox["x", "_"]}], "+", 
+           RowBox[{"\[CapitalDelta]y", " ", 
+            OverscriptBox["y", "_"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              RowBox[{"2", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], ")"}], 
+            " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           RowBox[{"6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "2"}], " ", 
+               SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+              RowBox[{"2", " ", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+         SubscriptBox["r", "p"]}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["M", "\[Xi]"], ")"}], 
+          RowBox[{"3", "/", "2"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           RowBox[{"4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            SqrtBox[
+             RowBox[{"M", " ", "\[Xi]"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"\[Xi]", " ", 
+              SubsuperscriptBox["r", "p", "3"]}]]}]}], ")"}]}]}], ")"}], 
+      "2"]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.872231795874486*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"68b5debd-3357-40e9-8566-fca0dbf30e3e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "9"], TraditionalForm]],ExpressionUUID->
+  "c206db54-6593-4a08-abf3-f9e1799ed852"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["\[CapitalDelta]x", "\[Alpha]"]}], TraditionalForm]],
+  ExpressionUUID->"2f5ff72e-053b-4866-ae80-338d923f181f"],
+ ")"
+}], "Subsection",
+ CellChangeTimes->{{3.869308626488617*^9, 3.869308688394363*^9}, {
+  3.869467717979335*^9, 3.869467724121395*^9}, {3.8694677638533287`*^9, 
+  3.869467765758772*^9}},ExpressionUUID->"ca6836d9-3b94-4e1c-8dba-\
+b0ec15ddf24b"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"48", " ", 
+    SuperscriptBox["\[Xi]", 
+     RowBox[{"7", "/", "2"}]], " ", 
+    SubsuperscriptBox["r", "p", "17"]}]], 
+  RowBox[{"M", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"9", " ", 
+      SuperscriptBox["M", "2"], " ", 
+      SqrtBox["\[Xi]"], " ", 
+      SubsuperscriptBox["r", "p", "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Xi]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\[CapitalDelta]x", " ", 
+             OverscriptBox["x", "_"]}], "+", 
+            RowBox[{"\[CapitalDelta]y", " ", 
+             OverscriptBox["y", "_"]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+               RowBox[{"2", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], ")"}],
+              " ", 
+             SuperscriptBox[
+              OverscriptBox["x", "_"], "2"]}], "+", 
+            RowBox[{
+            "6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+             OverscriptBox["x", "_"], " ", 
+             OverscriptBox["y", "_"]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "2"}], " ", 
+                SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+               SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+               RowBox[{"2", " ", 
+                SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+             SuperscriptBox[
+              OverscriptBox["y", "_"], "2"]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+             SuperscriptBox[
+              OverscriptBox["x", "_"], "2"]}], "+", 
+            RowBox[{
+            "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+             OverscriptBox["x", "_"], " ", 
+             OverscriptBox["y", "_"]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+             SuperscriptBox[
+              OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "M", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["x", "_"]}], "-", 
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], " ", 
+             SqrtBox[
+              RowBox[{"M", " ", 
+               SubscriptBox["r", "p"]}]]}]}], ")"}]}]}], ")"}], "3"]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+         "4", " ", "M", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ",
+           "\[Xi]", " ", 
+          OverscriptBox["x", "_"], " ", 
+          OverscriptBox["y", "_"]}], "+", 
+         RowBox[{"2", " ", "M", " ", 
+          SuperscriptBox["\[CapitalDelta]y", "2"], " ", "\[Xi]", " ", 
+          SuperscriptBox[
+           OverscriptBox["y", "_"], "2"]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[CapitalDelta]y", "2"], " ", "\[Xi]", " ", 
+          SubsuperscriptBox["r", "p", "3"]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[CapitalDelta]z", "2"], " ", "\[Xi]", " ", 
+          SubsuperscriptBox["r", "p", "3"]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[CapitalDelta]x", "2"], " ", "\[Xi]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "M", " ", 
+             SuperscriptBox[
+              OverscriptBox["x", "_"], "2"]}], "+", 
+            SubsuperscriptBox["r", "p", "3"]}], ")"}]}], "+", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "M", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["x", "_"]}], "-", 
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], " ", 
+             SqrtBox[
+              RowBox[{"M", " ", 
+               SubscriptBox["r", "p"]}]]}]}], ")"}], "2"]}], ")"}], "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[Xi]", 
+          RowBox[{"3", "/", "2"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[CapitalDelta]x", " ", 
+            OverscriptBox["x", "_"]}], "+", 
+           RowBox[{"\[CapitalDelta]y", " ", 
+            OverscriptBox["y", "_"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["M", "2"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"5", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"4", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "18", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "4"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 RowBox[{"5", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"]}], "-", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}]}], "+", 
+           RowBox[{"2", " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "-", 
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], 
+                   "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "4"]}], "+", 
+              RowBox[{
+              "2", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"15", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"13", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "3"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "+", 
+                 RowBox[{"5", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "-", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "66"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"5", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}], "-", 
+              RowBox[{
+              "2", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"13", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"15", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                 RowBox[{"13", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               OverscriptBox["x", "_"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "3"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "-", 
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "9"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "4"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{"3", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "-", 
+                 RowBox[{"21", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}], "+", 
+                 RowBox[{"12", " ", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], 
+                   "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "4"]}], "+", 
+              RowBox[{
+              "10", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"5", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"9", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "3"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{"3", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"7", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"7", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "-", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "-", 
+                 RowBox[{"8", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "4"]}], "-", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"56", " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}], "-", 
+              RowBox[{
+              "10", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"5", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               OverscriptBox["x", "_"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "3"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"12", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "-", 
+                 RowBox[{"21", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "+", 
+                 RowBox[{"12", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "4"]}], "-", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"7", " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "-", 
+                    RowBox[{"8", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "4"]}]}], ")"}], " ", 
+            SubsuperscriptBox["r", "p", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            SuperscriptBox["M", "2"], " ", 
+            SqrtBox["\[Xi]"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"5", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"3", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "16", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "3"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 RowBox[{"5", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"]}], "-", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}]}], "+", 
+           RowBox[{"2", " ", "M", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "-", 
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}], "+", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], "2"]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "4"]}], "+", 
+              RowBox[{
+              "2", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"17", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"11", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "3"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "+", 
+                 RowBox[{"7", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "-", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "66"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"7", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}], "-", 
+              RowBox[{
+              "2", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"11", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"17", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                 RowBox[{"11", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               OverscriptBox["x", "_"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "3"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "4"], "+", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "-", 
+                 RowBox[{"9", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "4"], "+", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "9"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "4"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{"6", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "4"], "-", 
+                 RowBox[{"6", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}], "+", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], "2"]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "4"]}], "+", 
+              RowBox[{
+              "16", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "3"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{"2", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "-", 
+                 SuperscriptBox["\[CapitalDelta]z", "4"], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "9"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}], "-", 
+              RowBox[{
+              "16", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               OverscriptBox["x", "_"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "3"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "4"], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "4"], "-", 
+                 RowBox[{"6", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "4"], "+", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "6"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "4"]}]}], ")"}], " ", 
+            SubsuperscriptBox["r", "p", "2"]}], "-", 
+           RowBox[{"4", " ", 
+            SuperscriptBox["M", 
+             RowBox[{"3", "/", "2"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"]}], ")"}], " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"\[Xi]", " ", 
+              SubscriptBox["r", "p"]}]]}], "-", 
+           RowBox[{"3", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"]}], ")"}], " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"4", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "10", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "4"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", "\[Xi]", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}]}], "+", 
+        RowBox[{"4", " ", "M", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           RowBox[{"4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            SuperscriptBox["M", "2"], " ", 
+            SqrtBox["\[Xi]"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "3"]}], "+", 
+           RowBox[{"2", " ", "M", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{"4", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"3", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "8", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "3"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubsuperscriptBox["r", "p", "2"]}], "-", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["M", 
+             RowBox[{"3", "/", "2"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+            SqrtBox[
+             RowBox[{"\[Xi]", " ", 
+              SubscriptBox["r", "p"]}]]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "2"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", "\[Xi]", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}]}]}], ")"}]}], "-", 
+     RowBox[{"M", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[Xi]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[CapitalDelta]x", " ", 
+            OverscriptBox["x", "_"]}], "+", 
+           RowBox[{"\[CapitalDelta]y", " ", 
+            OverscriptBox["y", "_"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              RowBox[{"2", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], ")"}], 
+            " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           RowBox[{"6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "2"}], " ", 
+               SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+              RowBox[{"2", " ", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}]}], ")"}]}], "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           RowBox[{"4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+        "4", " ", "M", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+         "\[Xi]", " ", 
+         OverscriptBox["x", "_"], " ", 
+         OverscriptBox["y", "_"]}], "+", 
+        RowBox[{"2", " ", "M", " ", 
+         SuperscriptBox["\[CapitalDelta]y", "2"], " ", "\[Xi]", " ", 
+         SuperscriptBox[
+          OverscriptBox["y", "_"], "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[CapitalDelta]y", "2"], " ", "\[Xi]", " ", 
+         SubsuperscriptBox["r", "p", "3"]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[CapitalDelta]z", "2"], " ", "\[Xi]", " ", 
+         SubsuperscriptBox["r", "p", "3"]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[CapitalDelta]x", "2"], " ", "\[Xi]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "M", " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           SubsuperscriptBox["r", "p", "3"]}], ")"}]}], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}], "2"]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"12", " ", "M", " ", 
+         SqrtBox["\[Xi]"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+             SuperscriptBox[
+              OverscriptBox["x", "_"], "2"]}], "+", 
+            RowBox[{
+            "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+             OverscriptBox["x", "_"], " ", 
+             OverscriptBox["y", "_"]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+               SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+             SuperscriptBox[
+              OverscriptBox["y", "_"], "2"]}]}], ")"}], "2"], " ", 
+         SubsuperscriptBox["r", "p", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[Xi]", 
+          RowBox[{"3", "/", "2"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            SuperscriptBox["M", "2"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "4"]}], "+", 
+           RowBox[{"M", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                 RowBox[{"4", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "14", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "4"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"]}], "-", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{"4", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "-", 
+                 RowBox[{"11", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], 
+                   "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "4"]}], "+", 
+              RowBox[{
+              "30", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "3"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"11", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"11", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "+", 
+                 RowBox[{"7", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "-", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "68"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"7", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}], "-", 
+              RowBox[{
+              "30", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               OverscriptBox["x", "_"], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "3"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "4"]}], "-", 
+                 RowBox[{"11", " ", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], "+", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "11"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "4"]}]}], ")"}], " ", 
+            SubsuperscriptBox["r", "p", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"4", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            SuperscriptBox["M", "2"], " ", 
+            SqrtBox["\[Xi]"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "3"]}], "+", 
+           RowBox[{"2", " ", "M", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"]}], "+", 
+           RowBox[{"4", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"3", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "8", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "3"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubsuperscriptBox["r", "p", "2"]}], "-", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["M", 
+             RowBox[{"3", "/", "2"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+            SqrtBox[
+             RowBox[{"\[Xi]", " ", 
+              SubscriptBox["r", "p"]}]]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              RowBox[{
+              "6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"], " ", 
+               OverscriptBox["y", "_"]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "2"}], " ", 
+                  SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+            SubscriptBox["r", "p"], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", "\[Xi]", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", "M", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[Xi]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[CapitalDelta]x", " ", 
+            OverscriptBox["x", "_"]}], "+", 
+           RowBox[{"\[CapitalDelta]y", " ", 
+            OverscriptBox["y", "_"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              RowBox[{"2", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                 SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], ")"}], 
+            " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           RowBox[{"6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "2"}], " ", 
+               SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+              RowBox[{"2", " ", 
+               SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}]}], ")"}]}], "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["x", "_"], "2"]}], "+", 
+           RowBox[{"4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+              SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+              SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "M", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["x", "_"]}], "+", 
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[CapitalDelta]y", " ", 
+               OverscriptBox["x", "_"]}], "-", 
+              RowBox[{"\[CapitalDelta]x", " ", 
+               OverscriptBox["y", "_"]}]}], ")"}], " ", 
+            SqrtBox[
+             RowBox[{"M", " ", 
+              SubscriptBox["r", "p"]}]]}]}], ")"}]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"3", " ", "M", " ", 
+         SqrtBox["\[Xi]"], " ", 
+         SubsuperscriptBox["r", "p", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\[Xi]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[CapitalDelta]x", " ", 
+                OverscriptBox["x", "_"]}], "+", 
+               RowBox[{"\[CapitalDelta]y", " ", 
+                OverscriptBox["y", "_"]}]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                  RowBox[{"2", " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                 ")"}], " ", 
+                SuperscriptBox[
+                 OverscriptBox["x", "_"], "2"]}], "+", 
+               RowBox[{
+               "6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                OverscriptBox["x", "_"], " ", 
+                OverscriptBox["y", "_"]}], "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "2"}], " ", 
+                   SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                  RowBox[{"2", " ", 
+                   SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+                SuperscriptBox[
+                 OverscriptBox["y", "_"], "2"]}]}], ")"}]}], "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                SuperscriptBox[
+                 OverscriptBox["x", "_"], "2"]}], "+", 
+               RowBox[{
+               "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                OverscriptBox["x", "_"], " ", 
+                OverscriptBox["y", "_"]}], "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                SuperscriptBox[
+                 OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", "M", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"\[CapitalDelta]x", " ", 
+                   OverscriptBox["x", "_"]}], "+", 
+                  RowBox[{"\[CapitalDelta]y", " ", 
+                   OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"\[CapitalDelta]y", " ", 
+                   OverscriptBox["x", "_"]}], "-", 
+                  RowBox[{"\[CapitalDelta]x", " ", 
+                   OverscriptBox["y", "_"]}]}], ")"}], " ", 
+                SqrtBox[
+                 RowBox[{"M", " ", 
+                  SubscriptBox["r", "p"]}]]}]}], ")"}]}]}], ")"}], "2"]}], 
+        "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+           "4", " ", "M", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", 
+            " ", "\[Xi]", " ", 
+            OverscriptBox["x", "_"], " ", 
+            OverscriptBox["y", "_"]}], "+", 
+           RowBox[{"2", " ", "M", " ", 
+            SuperscriptBox["\[CapitalDelta]y", "2"], " ", "\[Xi]", " ", 
+            SuperscriptBox[
+             OverscriptBox["y", "_"], "2"]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[CapitalDelta]y", "2"], " ", "\[Xi]", " ", 
+            SubsuperscriptBox["r", "p", "3"]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[CapitalDelta]z", "2"], " ", "\[Xi]", " ", 
+            SubsuperscriptBox["r", "p", "3"]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[CapitalDelta]x", "2"], " ", "\[Xi]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", "M", " ", 
+               SuperscriptBox[
+                OverscriptBox["x", "_"], "2"]}], "+", 
+              SubsuperscriptBox["r", "p", "3"]}], ")"}]}], "+", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", "M", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["x", "_"]}], "+", 
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["x", "_"]}], "-", 
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}], " ", 
+               SqrtBox[
+                RowBox[{"M", " ", 
+                 SubscriptBox["r", "p"]}]]}]}], ")"}], "2"]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"12", " ", "M", " ", 
+            SqrtBox["\[Xi]"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                SuperscriptBox[
+                 OverscriptBox["x", "_"], "2"]}], "+", 
+               RowBox[{
+               "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                OverscriptBox["x", "_"], " ", 
+                OverscriptBox["y", "_"]}], "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                  SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                  SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                SuperscriptBox[
+                 OverscriptBox["y", "_"], "2"]}]}], ")"}], "2"], " ", 
+            SubsuperscriptBox["r", "p", "2"]}], "+", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", 
+             RowBox[{"3", "/", "2"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               SuperscriptBox["M", "2"], " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"\[CapitalDelta]x", " ", 
+                   OverscriptBox["x", "_"]}], "+", 
+                  RowBox[{"\[CapitalDelta]y", " ", 
+                   OverscriptBox["y", "_"]}]}], ")"}], "4"]}], "+", 
+              RowBox[{"M", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"\[CapitalDelta]x", " ", 
+                   OverscriptBox["x", "_"]}], "+", 
+                  RowBox[{"\[CapitalDelta]y", " ", 
+                   OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"3", " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "2"]}], "-", 
+                    RowBox[{"4", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                   ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["x", "_"], "2"]}], "+", 
+                 RowBox[{
+                 "14", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                  
+                  OverscriptBox["x", "_"], " ", 
+                  OverscriptBox["y", "_"]}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "4"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                    RowBox[{"3", " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+               SubscriptBox["r", "p"]}], "+", 
+              RowBox[{"4", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "4"]}], "-", 
+                    RowBox[{"11", " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}], "+", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], 
+                    "2"]}]}], ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["x", "_"], "4"]}], "+", 
+                 RowBox[{
+                 "30", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                  
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["x", "_"], "3"], " ", 
+                  OverscriptBox["y", "_"]}], "-", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"11", " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                    RowBox[{"11", " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "4"]}], "+", 
+                    RowBox[{"7", " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "68"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"7", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                   ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["x", "_"], "2"], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["y", "_"], "2"]}], "-", 
+                 RowBox[{
+                 "30", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                  
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                  OverscriptBox["x", "_"], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["y", "_"], "3"]}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "4"]}], "+", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "4"]}], "-", 
+                    RowBox[{"11", " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], "+", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "4"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "11"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"]}], "+", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}]}]}], 
+                   ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["y", "_"], "4"]}]}], ")"}], " ", 
+               SubsuperscriptBox["r", "p", "2"]}]}], ")"}]}], "+", 
+           RowBox[{"4", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", "M", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["x", "_"]}], "+", 
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}]}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["x", "_"]}], "-", 
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}], " ", 
+               SqrtBox[
+                RowBox[{"M", " ", 
+                 SubscriptBox["r", "p"]}]]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               SuperscriptBox["M", "2"], " ", 
+               SqrtBox["\[Xi]"], " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"\[CapitalDelta]x", " ", 
+                   OverscriptBox["x", "_"]}], "+", 
+                  RowBox[{"\[CapitalDelta]y", " ", 
+                   OverscriptBox["y", "_"]}]}], ")"}], "3"]}], "+", 
+              RowBox[{"2", " ", "M", " ", 
+               SqrtBox["\[Xi]"], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["x", "_"]}], "+", 
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["x", "_"], "2"]}], "+", 
+                 RowBox[{
+                 "4", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                  OverscriptBox["x", "_"], " ", 
+                  OverscriptBox["y", "_"]}], "-", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+               SubscriptBox["r", "p"]}], "+", 
+              RowBox[{"4", " ", 
+               SqrtBox["\[Xi]"], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["x", "_"]}], "+", 
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                    RowBox[{"3", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                   ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["x", "_"], "2"]}], "+", 
+                 RowBox[{
+                 "8", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                  OverscriptBox["x", "_"], " ", 
+                  OverscriptBox["y", "_"]}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "3"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                    RowBox[{"3", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+               SubsuperscriptBox["r", "p", "2"]}], "-", 
+              RowBox[{"2", " ", 
+               SuperscriptBox["M", 
+                RowBox[{"3", "/", "2"}]], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["x", "_"]}], "-", 
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}], " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"\[CapitalDelta]x", " ", 
+                   OverscriptBox["x", "_"]}], "+", 
+                  RowBox[{"\[CapitalDelta]y", " ", 
+                   OverscriptBox["y", "_"]}]}], ")"}], "2"], " ", 
+               SqrtBox[
+                RowBox[{"\[Xi]", " ", 
+                 SubscriptBox["r", "p"]}]]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[CapitalDelta]y", " ", 
+                  OverscriptBox["x", "_"]}], "-", 
+                 RowBox[{"\[CapitalDelta]x", " ", 
+                  OverscriptBox["y", "_"]}]}], ")"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[CapitalDelta]x", "2"], "-", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "+", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}], ")"}]}]}], 
+                   ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["x", "_"], "2"]}], "+", 
+                 RowBox[{
+                 "6", " ", "\[CapitalDelta]x", " ", "\[CapitalDelta]y", " ", 
+                  OverscriptBox["x", "_"], " ", 
+                  OverscriptBox["y", "_"]}], "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "2"}], " ", 
+                    SuperscriptBox["\[CapitalDelta]x", "2"]}], "+", 
+                    SuperscriptBox["\[CapitalDelta]y", "2"], "-", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["\[CapitalDelta]z", "2"]}]}], ")"}], " ", 
+                  SuperscriptBox[
+                   OverscriptBox["y", "_"], "2"]}]}], ")"}], " ", 
+               SubscriptBox["r", "p"], " ", 
+               SqrtBox[
+                RowBox[{"M", " ", "\[Xi]", " ", 
+                 SubscriptBox["r", "p"]}]]}]}], ")"}]}]}], ")"}]}]}], 
+       ")"}]}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.872231997126054*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"70be76a8-beed-410c-8001-6f35edf95f66"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{825, 776},
+WindowMargins->{{Automatic, 287}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"272fa982-c4c5-43d3-ad06-6f229e25f9eb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 191, 3, 53, "Subtitle",ExpressionUUID->"13aef0fd-49fb-4806-bd21-fb0f703c80a9"],
+Cell[774, 27, 2043, 60, 165, "Text",ExpressionUUID->"900380ca-8620-4027-9758-952e5ad51955"],
+Cell[CellGroupData[{
+Cell[2842, 91, 381, 8, 54, "Subsection",ExpressionUUID->"6b4cfc8d-f6f2-4e53-b804-f16558fe297b"],
+Cell[3226, 101, 1945, 56, 70, "Output",ExpressionUUID->"4e8c5f58-02ff-43a4-8432-ab7b1008e1bb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5208, 162, 575, 16, 54, "Subsection",ExpressionUUID->"a69ba442-8ec1-43a5-903b-1ef1dde078b9"],
+Cell[5786, 180, 271, 5, 34, "Output",ExpressionUUID->"adffc9ed-87c2-41e4-b0c8-44e4dffe5e85"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6094, 190, 547, 15, 54, "Subsection",ExpressionUUID->"547b9295-4958-4aa5-9436-c45b572c30c5"],
+Cell[6644, 207, 3245, 92, 135, "Output",ExpressionUUID->"ec480890-505e-4d5c-a5ce-2dd3577c1a0a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9926, 304, 553, 16, 54, "Subsection",ExpressionUUID->"44d88252-6a7f-4c68-9c49-cca8a9413d5d"],
+Cell[10482, 322, 19785, 494, 594, "Output",ExpressionUUID->"68b5debd-3357-40e9-8566-fca0dbf30e3e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30304, 821, 573, 16, 54, "Subsection",ExpressionUUID->"ca6836d9-3b94-4e1c-8dba-b0ec15ddf24b"],
+Cell[30880, 839, 80988, 1918, 1553, "Output",ExpressionUUID->"70be76a8-beed-410c-8001-6f35edf95f66"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
